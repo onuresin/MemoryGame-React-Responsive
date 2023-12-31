@@ -124,10 +124,10 @@ body.dark-theme {
 
 /*Responsive*/
 
-@media (450px <= width <= 650px) {
+@media (350px <= width <= 600px) {
   .game-container{
     margin: 0 auto;
-    width: 450px;
+    width: 350px;
     gap: 8px;
   }
   .header {
