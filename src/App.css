@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,700;1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --SageGreen: #4F6F52;
+  --PastelGreen: #86A789;
+  --CremeGreen: #B2C8BA;
+  --CandyGreen: #D2E3C8;
+  --BoneGray: #EBF3E8;
+  --DarkGreen: #163020;
+  --MoreGreen: #304D30;
+}
+.dark-theme {
+  --Black: #191919;
+  --PsyhcoPurple: #7743DB;
+  --LightPurple: #C3ACD0;
+  --JustColor: #F7EFE5;
+  --IsThisWhite: #FFFBF5;
+}
+body{
+  background-color: var(--DarkGreen);
+  font-family: 'Arimo', sans-serif;
+  transition: background-color 0.7s ease;
+}
+/* Dark Theme*/
+body.dark-theme {
+  background-color: var(--Black);
+  transition: background-color 0.7s ease;
+  & .numberCircle{
+   background-color: var(--PsyhcoPurple);
+
+  }
+  & .numberCircle:hover{
+    background-color: var(--LightPurple);
+  }
+  & .active {
+    background-color: var(--LightPurple);
+    border: 3px dashed var(--IsThisWhite);
+  }
+  & .click4restart button {
+    background-color: var(--PsyhcoPurple);
+    color: var(--JustColor);
+  }
+  & .click4restart button:hover {
+    background-color: var(--JustColor);
+    color: var(--Black);
+  }
+}
+/**//**//**/
+.header {
+  display: flex;
+  align-items: center;
+  gap: 160px;
+  padding: 25px 15px;
+}
+.game-container{
+  margin: 0 auto;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.game-container h2{
+  font-size: 20px;
+  color: #F9E8D9;
+  text-align: center;
+  text-shadow: 8px 7px 9px black;
+}
+.game-container h5{
+  font-size: 25px;
+  text-align: center;
+  color: #F9E8D9;
+  text-shadow: 8px 7px 9px black;
+}
+.board{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+.centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numberCircle{
+  width: 150px;
+  height: 150px;
+  font-size: 50px;
+  background-color: var(--SageGreen);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.numberCircle:hover{
+  background-color: var(--CremeGreen);
+}
+
+.active{
+  background-color: var(--PastelGreen);
+  border: 3px dashed var(--BoneGray);
+}
+.click4restart button {
+  border: 0;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--MoreGreen);
+  color: #fff;
+}
+.click4restart button:hover {
+  background-color: var(--PastelGreen);
+  color: #191919;
+}
+
+/*Responsive*/
+
+@media (max-width: 710px) {
+  .game-container{
+    margin: 0 auto;
+    width: 450px;
+    gap: 8px;
+  }
+  .header {
+    gap: 80px;
+    & h5 {
+      font-size: 19px;
+    }
+  }
+  .numberCircle {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+  }
+}
