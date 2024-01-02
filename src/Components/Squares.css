@@ -1,15 +1,16 @@
 .rotate {
-    animation: rotateAnimation 0.5s linear;
+    animation: rotateAnimation 0.5s linear 0.5;
   }
   
   @keyframes rotateAnimation {
     0% {
       transform: rotateY(0deg);
     }
-    50% {
+    60% {
       transform: rotateY(180deg);
     }
     100% {
       transform: rotateY(360deg);
     }
+    
   }
